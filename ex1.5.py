@@ -17,8 +17,8 @@ def funcMemo(n, memo):
 timeforfunc = []
 timeforfuncMemo = []
 for i in range(0, 36):
-  timeforfunc.append(timeit.timeit(lambda: func(i), setup="from __main__ import func", number=i))
-  timeforfuncMemo.append(timeit.timeit(lambda: funcMemo(i,{}), setup="from __main__ import funcMemo", number=i))
+  timeforfunc.append(timeit.timeit(lambda: func(i), setup="from __main__ import func", number=1))
+  timeforfuncMemo.append(timeit.timeit(lambda: funcMemo(i,{}), setup="from __main__ import funcMemo", number=1))
 
 # Plot the results
 import matplotlib.pyplot as plt
